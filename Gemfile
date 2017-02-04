@@ -18,7 +18,8 @@ gem 'font-awesome-rails'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 gem 'bootstrap4-kaminari-views'
 gem 'ckeditor'
-gem "paperclip"
+gem 'paperclip'
+gem 'non-stupid-digest-assets', '~> 1.0', '>= 1.0.9'
 
 group :development, :test do
   gem 'byebug', platform: :mri
