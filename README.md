@@ -1,24 +1,27 @@
-# README
+# Questionaire 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Things you may want to cover:
+This app is a simple question storage.
 
-* Ruby version
+This app build with [Rails](http://rubyonrails.org) framework.
 
-* System dependencies
+## How to Setup
 
-* Configuration
+You have to install [Ruby](https://www.ruby-lang.org) version ` >= 2.3.0` and [Bundler](http://bundler.io) first
 
-* Database creation
+- clone/download this repository
 
-* Database initialization
+- run `bundle install`
 
-* How to run the test suite
+- run `bundle exec rake db:create db:migrate`
 
-* Services (job queues, cache servers, search engines, etc.)
+- run you Rails server with `rails s`
 
-* Deployment instructions
+# Testing
 
-* ...
+You can run test with `bundle exec rake test` for all test, 
+
+or `bundle exec rake test:models` for model/unit test only
+
+and `bundle exec rake test:functional` for controller test only
