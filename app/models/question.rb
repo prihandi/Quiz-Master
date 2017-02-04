@@ -12,11 +12,11 @@ class Question < ApplicationRecord
     end
 
     def is_correct?
-      h = {"millions" => "millions","hundreds" => "hundred" }
+      h = {"millions" => "millions","hundreds" => "hundred","ty-" => "ty " }
       # convert all number both integer and float in answer to string
       a = answer.gsub(/\d+(\.[\d]+){0,1}/) { |num| (num.to_i == num.to_f)? num.to_i.humanize : num.to_f.humanize }
       s = submitted_answer.gsub(/\d+(\.[\d]+){0,1}/) { |num| (num.to_i == num.to_f)? num.to_i.humanize : num.to_f.humanize }
       # remove unnecesary character and whitespaces including - 
-      a.gsub(/[(),.-]/, ' ').downcase.strip.squeeze(' ').gsub(/\w+/) { |m| h.fetch(m,m)} == s.gsub(/[(),.-]/, ' ').downcase.strip.squeeze(' ').gsub(/\w+/) { |m| h.fetch(m,m)} 
+      a.gsub(/[(),.]/, ' ').downcase.strip.squeeze(' ').gsub(/\w+/) { |m| h.fetch(m,m)} == s.gsub(/[(),.]/, ' ').downcase.strip.squeeze(' ').gsub(/\w+/) { |m| h.fetch(m,m)} 
     end
 end
