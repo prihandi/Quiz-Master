@@ -3,7 +3,11 @@ class QuestionsController < ApplicationController
   
 
   def index
-    @questions = Question.page(params[:page]).per(5)
+    @questions = Question.order("updated_at desc").page(params[:page]).per(5)
+    respond_to do |format|
+      format.html
+      format.js { render :layout => false }
+    end
   end
 
   def show

@@ -5,8 +5,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Question</th>
-      <th>Answer</th>
+      <th><h4>Question</h4></th>
       <th></th>
     </tr>
   </thead>
@@ -14,8 +13,7 @@
   <tbody>
     <% @questions.each do |question| %>
       <tr>
-        <td class="col-md-6"><%= question.question %></td>
-        <td class="col-md-2"><%= question.answer %></td>
+        <td class="col-md-6"><%= question.question.html_safe %></td>
         <td class="col-md-4"> 
         <%= link_to fa_icon(:eye, text: "Show"), question, class: "btn btn-success" %>
         <%= link_to fa_icon(:pencil, text: "Edit"), edit_question_path(question), class: "btn btn-warning" %>
@@ -28,5 +26,5 @@
   
 </table>
 <center>
-  <%= paginate @questions, window: 2, theme: 'twitter-bootstrap-4' %>
+  <%= paginate @questions, window: 3, theme: 'twitter-bootstrap-4' %>
 </center>

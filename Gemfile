@@ -17,6 +17,8 @@ gem 'bootstrap_form'
 gem 'font-awesome-rails'
 gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
 gem 'bootstrap4-kaminari-views'
+gem 'ckeditor'
+gem "paperclip"
 
 group :development, :test do
   gem 'byebug', platform: :mri

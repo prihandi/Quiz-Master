@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Question :</strong>
+  <h4>Question :</h4>
 </p>
-<p class="well" >
-  <%= @question.question %>
+<p >
+  <%= @question.question.html_safe %>
 </p>
 
 <p>
-  <strong>Answer :</strong>
+  <h4>Answer :</h4>
 </p>
 <p class="well" >
   <%= @question.answer %>

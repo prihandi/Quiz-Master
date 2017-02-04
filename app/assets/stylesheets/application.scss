@@ -41,8 +41,12 @@ textarea {
 }
 
 .center h1 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
+.jumbotron {
+  padding: 8px;
+}
+
 
 /* typography */
 
@@ -60,7 +64,7 @@ h1 {
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-align: center;
   font-weight: normal;
   color: #777;
@@ -85,3 +89,31 @@ p {
   }
 }
 
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+ 
