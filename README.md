@@ -18,7 +18,7 @@ You have to install [Ruby](https://www.ruby-lang.org) version ` >= 2.3.0` and [B
 
 - run you Rails server with `rails s`
 
-# Testing
+## Testing
 
 You can run test with `bundle exec rake test` for all test, 
 
