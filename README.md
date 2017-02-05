@@ -24,4 +24,4 @@ You can run test with `bundle exec rake test` for all test,
 
 or `bundle exec rake test:models` for model/unit test only
 
-and `bundle exec rake test:functional` for controller test only
+and `bundle exec rake test:controllers` for controller test only

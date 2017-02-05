@@ -22,9 +22,9 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-
     if @question.save
-      redirect_to action: "index", notice: 'Question was successfully created.'
+      redirect_to action: "index"
+      flash.now[:success] = "Question was successfully created"
     else
       render :new
     end
@@ -32,7 +32,8 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to action: "index", notice: 'Question was successfully updated.'
+      redirect_to action: "index"
+      flash.now[:success] = "Question was successfully updated."
     else
       render :edit
     end
