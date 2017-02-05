@@ -19,8 +19,8 @@ class QuestionsControllerTest < ActionDispatch::IntegrationTest
     assert_difference('Question.count') do
       post questions_url, params: { question: { answer: @question.answer, question: @question.question } }
     end
-
     assert_redirected_to questions_url
+    assert_not flash.empty?
   end
 
   test "should show question" do
@@ -36,13 +36,14 @@ class QuestionsControllerTest < ActionDispatch::IntegrationTest
   test "should update question" do
     patch question_url(@question), params: { question: { answer: @question.answer, question: @question.question } }
     assert_redirected_to questions_url
+    assert_not flash.empty?
   end
 
   test "should destroy question" do
     assert_difference('Question.count', -1) do
       delete question_url(@question)
     end
-
     assert_redirected_to questions_url
+    assert_not flash.empty?
   end
 end
