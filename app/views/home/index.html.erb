@@ -2,8 +2,12 @@
     <h3><strong>Welcome to Questionaire</strong></h3>
     <h4>
       You are challenged to answer question. </br>
+      <% if !@random_id.nil? -%>
       Picked randomly <%= link_to fa_icon(:try, text: "Try"), answer_path(@random_id), class: "btn btn-success" %> </br>
       or Pick one below
+      <% else -%>
+      But, looks like there are no question. <%= link_to "Create question", new_question_path, class: "btn btn-success" %> </br>
+      <% end -%>
     </h4>
 </div>
 
