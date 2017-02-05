@@ -1,6 +1,6 @@
-# Questionaire 
+# Quiz Master
 
-[![Build Status](https://travis-ci.org/prihandi/questionaire.svg?branch=master)](https://travis-ci.org/prihandi/questionaire)
+[![Build Status](https://travis-ci.org/prihandi/Quiz-Master.svg?branch=master)](https://travis-ci.org/prihandi/Quiz-Master)
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
@@ -16,7 +16,7 @@ You have to install [Ruby](https://www.ruby-lang.org) version ` >= 2.3.0` and [B
 
 - run `bundle install`
 
-- run `bundle exec rake db:create db:migrate`
+- run `bundle exec rake db:create db:migrate db:seed`
 
 - run you Rails server with `rails s`
 
