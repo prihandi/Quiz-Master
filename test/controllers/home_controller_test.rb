@@ -6,4 +6,9 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get answer" do
+    get answer_path
+    assert_response :success
+  end
+
 end
