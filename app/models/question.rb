@@ -1,15 +1,6 @@
 class Question < ApplicationRecord
   validates :question, presence: true, length: { minimum: 3 }
   validates :answer, presence: true
-  validate :correct_answer, if: :submitted_answer_present? 
-
-    def correct_answer
-      errors.add(:answer, "is not correct yet, Try again!") unless is_correct?
-    end
-
-    def submitted_answer_present? 
-      submitted_answer.present? 
-    end
 
     def is_correct?
       h = {"millions" => "millions","hundreds" => "hundred" }

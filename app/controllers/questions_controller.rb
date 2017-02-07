@@ -50,6 +50,6 @@ class QuestionsController < ApplicationController
     end
 
     def question_params
-      params.require(:question).permit(:question, :answer, :submitted_answer)
+      params.require(:question).permit(:question, :answer)
     end
 end
